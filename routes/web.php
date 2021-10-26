@@ -11,6 +11,8 @@ use App\Http\Controllers\Blog\BlogController;
 use App\Http\Controllers\About\AboutController;
 /*TODO: Contact Controller*/
 use App\Http\Controllers\Contact\ContactController;
+/*TODO: Dashboard Controller*/
+use App\Http\Controllers\Dashboard\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +34,6 @@ Route::get('/blog',[BlogController::class,'blog'])->name('blog');
 Route::get('/about',[AboutController::class,'about'])->name('about');
 /*TODO: Contact Controller*/
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
+
+/*TODO: Dashboard Controller*/
+Route::get('/dashboard',[DashboardController::class,'dashboard']);

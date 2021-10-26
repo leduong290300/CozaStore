@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('image');
             $table->text('description_short');
             $table->longText('description_long');
+            $table->string('status');
             $table->integer('categories_id')->unsigned();
             $table->foreign('categories_id')->references('id')->on('categories');
             $table->timestamps();
