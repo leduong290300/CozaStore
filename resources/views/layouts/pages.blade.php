@@ -74,7 +74,7 @@
 <!--===============================================================================================-->
 <script src="{{asset('assets/lib/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
-<script src="{{asset('assets/lib/bootstrap/js/popper.js')}}"></script>
+<script src="{{asset('assets/lib/bootstrap/js/popper.min.js')}}"></script>
 <script src="{{asset('assets/lib/bootstrap/js/bootstrap.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('assets/lib/select2/select2.min.js')}}"></script>
