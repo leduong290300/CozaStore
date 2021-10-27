@@ -1,5 +1,11 @@
 @extends('layouts.administration')
 @section('page','Dashboard')
+@section('card')
+<div class="row">
+    <x-card-product/>
+    <x-card-order/>
+</div>
+@endsection
 @section('content')
   <div class="col-lg-6">
     <div class="card mb-4">
