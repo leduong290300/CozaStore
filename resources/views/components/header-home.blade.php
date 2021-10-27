@@ -49,9 +49,12 @@
             <i class="zmdi zmdi-account-circle" > </i>
           </div>
           <div class="dropdown-menu" aria-labelledby="dropdownUser">
-            <a class="dropdown-item" href="#">Login</a>
-            {{--<a class="dropdown-item" href="#">Profile</a>
-            <a class="dropdown-item" href="#">Logout</a>--}}
+            @if(auth()->check())
+              <a class="dropdown-item" href="">Profile</a>
+              <a class="dropdown-item" href="{{route('submitLogoutUser')}}">Logout</a>
+            @else
+              <a class="dropdown-item" href="{{route('showFormLoginUser')}}">Login</a>
+            @endif
           </div>
         </div>
       </nav>
@@ -75,9 +78,17 @@
         <i class="zmdi zmdi-shopping-cart"></i>
       </div>
 
-      <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-        <i class="zmdi zmdi-account-circle"> </i>
-      </a>
+      <div id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11" >
+        <i class="zmdi zmdi-account-circle" > </i>
+      </div>
+      <div class="dropdown-menu" aria-labelledby="dropdownUser">
+        @if(auth()->check())
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="{{route('submitLogoutUser')}}">Logout</a>
+        @else
+          <a class="dropdown-item" href="{{route('showFormLoginUser')}}">Login</a>
+        @endif
+      </div>
     </div>
 
     <!-- Button show menu -->

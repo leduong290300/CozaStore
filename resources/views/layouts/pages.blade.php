@@ -52,8 +52,6 @@
 <!-- Content -->
 @yield('content')
 
-<!-- Map -->
-@yield('map')
 
 <!-- Footer -->
 <x-footer/>

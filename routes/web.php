@@ -13,6 +13,12 @@ use App\Http\Controllers\About\AboutController;
 use App\Http\Controllers\Contact\ContactController;
 /*TODO: Dashboard Controller*/
 use App\Http\Controllers\Dashboard\DashboardController;
+/*TODO: Login User Controller*/
+use App\Http\Controllers\LoginUser\LoginUserController;
+/*TODO: Register User Controller*/
+use App\Http\Controllers\RegisterUser\RegisterUserController;
+/*TODO: Forgot User Controller*/
+use App\Http\Controllers\ForgotUser\ForgotUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +40,14 @@ Route::get('/blog',[BlogController::class,'blog'])->name('blog');
 Route::get('/about',[AboutController::class,'about'])->name('about');
 /*TODO: Contact Controller*/
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
-
 /*TODO: Dashboard Controller*/
 Route::get('/dashboard',[DashboardController::class,'dashboard']);
+/*TODO: Login User Controller*/
+Route::get('/login',[LoginUserController::class,'login'])->name('showFormLoginUser');
+Route::post('/login',[LoginUserController::class,'loginSubmit'])->name('submitFormLoginUser');
+Route::get('/logout',[LoginUserController::class,'logoutSubmit'])->name('submitLogoutUser');
+/*TODO: Register User Controller*/
+Route::get('/register',[RegisterUserController::class,'register'])->name('showFormRegisterUser');
+Route::post('/register',[RegisterUserController::class,'registerSubmit'])->name('submitFormRegisterUser');
+/*TODO: Forgot User Controller*/
+Route::get('/forgot_password',[ForgotUserController::class,'forgot'])->name('showFormForgotPasswordUser');

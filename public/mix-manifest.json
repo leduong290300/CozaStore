@@ -1,5 +1,6 @@
 {
     "/assets/css/administration.css": "/assets/css/administration.css",
+    "/assets/css/form.css": "/assets/css/form.css",
     "/assets/css/main.css": "/assets/css/main.css",
     "/assets/css/sb-admin-2.css": "/assets/css/sb-admin-2.css",
     "/assets/css/util.css": "/assets/css/util.css",
@@ -74,6 +75,5 @@
     "/assets/image/slide-07.jpg": "/assets/image/slide-07.jpg",
     "/assets/image/thumb-01.jpg": "/assets/image/thumb-01.jpg",
     "/assets/image/thumb-02.jpg": "/assets/image/thumb-02.jpg",
-    "/assets/image/thumb-03.jpg": "/assets/image/thumb-03.jpg",
-    "/assets/lib/sb-admin-2.js": "/assets/lib/sb-admin-2.js"
+    "/assets/image/thumb-03.jpg": "/assets/image/thumb-03.jpg"
 }
