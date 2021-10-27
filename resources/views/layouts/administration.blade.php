@@ -37,25 +37,20 @@
       <div class="col-lg-12">
         <h1 class="page-header">Dashboard</h1>
       </div>
-      <!-- /.col-lg-12 -->
     </div>
-    <!-- /.row -->
-    <div class="row">
-      <x-card-product/>
-      <x-card-order/>
-    </div>
-    <!-- /.row -->
+    {{--Card--}}
+    @yield('card')
     <div class="row">
       <!-- Content -->
       @yield('content')
     </div>
-
-    <!-- /.row -->
+    {{--Modal Delete--}}
+    <x-modal-delete/>
   </div>
-  <!-- /#page-wrapper -->
+
 
 </div>
-<!-- /#wrapper -->
+
 
 <!-- jQuery -->
 <script src="{{asset('assets/lib/jquery/jquery-3.1.0.min.js')}}"></script>
@@ -71,6 +66,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 <script src="{{asset('assets/js/chart-area.js')}}"></script>
 <script src="{{asset('assets/js/chart-bar.js')}}"></script>
+{{--Custom js--}}
+<script src="{{asset('assets/js/administration.js')}}"></script>
 </body>
 
 </html>
