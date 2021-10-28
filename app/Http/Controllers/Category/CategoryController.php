@@ -47,6 +47,14 @@ class CategoryController extends Controller
 
     }
 
+    public function show($id)
+    {
+      $products = Categories::findOrFail($id)->getProducts;
+      return view('pages.category.category_details',[
+        'products' => $products
+      ]);
+    }
+
     public function edit($id)
     {
       $category = Categories::find($id);
@@ -87,8 +95,8 @@ class CategoryController extends Controller
         $category = Categories::findOrFail($id);
         try {
           $category->delete();
-          if(Storage::exists('public/upload/categories'.$category->image)) {
-            Storage::delete('public/upload/categories'.$category->image);
+          if(Storage::exists('public/upload/categories/'.$category->image)) {
+            Storage::delete('public/upload/categories/'.$category->image);
           }
           $success = 'Delete category successfully';
           return redirect()

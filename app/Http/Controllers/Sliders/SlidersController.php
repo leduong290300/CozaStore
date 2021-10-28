@@ -61,7 +61,7 @@ class SlidersController extends Controller
     {
       $data = $request->validated();
       $slider = Sliders::findOrFail($id);
-      $sliderImgOld = Storage::files('public/upload/sliders',$slider->name);
+      $sliderImgOld = Storage::files('public/upload/sliders',$slider->image);
       $sliderImgNew = time().'_'.$data['slider']->getClientOriginalName();
       try {
         $slider->update([
@@ -88,8 +88,8 @@ class SlidersController extends Controller
       try
       {
         $slider->delete();
-        if(Storage::exists('public/upload/sliders'.$slider->image)) {
-          Storage::delete('public/upload/sliders'.$slider->image);
+        if(Storage::exists('public/upload/sliders/'.$slider->image)) {
+          Storage::delete('public/upload/sliders/'.$slider->image);
         }
         $success = 'Delete slider successfully';
         return redirect()

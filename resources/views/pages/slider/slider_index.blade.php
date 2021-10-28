@@ -29,7 +29,7 @@
                 @if($slider)
                   @foreach($slider as $element)
                     <tr>
-                      <td>1</td>
+                      <td>{{$element->id}}</td>
                       <td width="30%">
                         <img src="{{asset('storage/upload/sliders/'.$element->image)}}" alt="{{$element->image}}" class="img-fluid img-thumbnail">
                       </td>
