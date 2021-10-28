@@ -21,6 +21,8 @@ use App\Http\Controllers\RegisterUser\RegisterUserController;
 use App\Http\Controllers\ForgotUser\ForgotUserController;
 /*TODO: Slider Resource Controller*/
 use App\Http\Controllers\Sliders\SlidersController;
+/*TODO: Category Resource Controller*/
+use App\Http\Controllers\Category\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +57,5 @@ Route::post('/register',[RegisterUserController::class,'registerSubmit'])->name(
 Route::get('/forgot_password',[ForgotUserController::class,'forgot'])->name('showFormForgotPasswordUser');
 /*TODO: Slider Resource Controller*/
 Route::resource('slider',SlidersController::class);
+/*TODO: Category Resource Controller*/
+Route::resource('category',CategoryController::class);

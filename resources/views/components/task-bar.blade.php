@@ -33,7 +33,7 @@
             <a href="#"><i class="fa fa-gift fa-fw"></i>Product</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-file-text fa-fw"></i>Category</a>
+            <a href="{{route('category.index')}}"><i class="fa fa-file-text fa-fw"></i>Category</a>
           </li>
           <li>
             <a href="{{route('slider.index')}}"><i class="fa fa-slideshare fa-fw"></i>Slider</a>
