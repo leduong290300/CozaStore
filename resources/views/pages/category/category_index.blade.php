@@ -10,7 +10,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <i class="fa fa-table"></i>
-      Slider List
+      Category List
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
@@ -29,7 +29,7 @@
           @if($categories)
             @foreach($categories as $element)
               <tr>
-                <td>1</td>
+                <td>{{$element->id}}</td>
                 <td width="30%">
                   <img src="{{asset('storage/upload/categories/'.$element->image)}}" alt="" class="img-fluid img-thumbnail">
                 </td>
@@ -50,6 +50,12 @@
                     <i class="fa fa-trash"></i>
                     Delete
                   </button>
+                  <a href="{{route('category.show',$element->id)}}">
+                    <button class="btn btn-primary">
+                      <i class="fa fa-folder"></i>
+                      All product
+                    </button>
+                  </a>
                 </td>
               </tr>
             @endforeach

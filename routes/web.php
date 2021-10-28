@@ -23,6 +23,8 @@ use App\Http\Controllers\ForgotUser\ForgotUserController;
 use App\Http\Controllers\Sliders\SlidersController;
 /*TODO: Category Resource Controller*/
 use App\Http\Controllers\Category\CategoryController;
+/*TODO: Product Resource Controller*/
+use App\Http\Controllers\Product\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +61,5 @@ Route::get('/forgot_password',[ForgotUserController::class,'forgot'])->name('sho
 Route::resource('slider',SlidersController::class);
 /*TODO: Category Resource Controller*/
 Route::resource('category',CategoryController::class);
+/*TODO: Product Resource Controller*/
+Route::resource('product',ProductController::class);

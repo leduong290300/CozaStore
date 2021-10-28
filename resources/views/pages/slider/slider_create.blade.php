@@ -1,5 +1,5 @@
 @extends('layouts.administration')
-@section('page','Create slider')
+@section('page','Add slider')
 @section('content')
   <div class="col-lg-12">
     @if(session('error'))
@@ -11,7 +11,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <i class="fa fa-plus"></i>
-        Create slider
+        Add slider
       </div>
       <div class="panel-body">
         <div class="row">

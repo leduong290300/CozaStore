@@ -22,7 +22,7 @@
             <a href="#"><i class="fa fa-gift fa-fw"></i>Order</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-plus fa-fw"></i>Add product</a>
+            <a href="{{route('product.create')}}"><i class="fa fa-plus fa-fw"></i>Add product</a>
           </li>
         </ul>
       </li>
@@ -30,7 +30,7 @@
         <a href="#"><i class="fa fa-tasks fa-fw"></i> Management<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
-            <a href="#"><i class="fa fa-gift fa-fw"></i>Product</a>
+            <a href="{{route('product.index')}}"><i class="fa fa-gift fa-fw"></i>Product</a>
           </li>
           <li>
             <a href="{{route('category.index')}}"><i class="fa fa-file-text fa-fw"></i>Category</a>

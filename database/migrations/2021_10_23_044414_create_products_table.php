@@ -19,13 +19,13 @@ class CreateProductsTable extends Migration
             $table->string('size');
             $table->string('color');
             $table->integer('inventory');
-            $table->integer('price');
+            $table->float('price');
             $table->string('image');
             $table->text('description_short');
             $table->longText('description_long');
-            $table->string('status');
+            $table->string('regime');
             $table->integer('categories_id')->unsigned();
-            $table->foreign('categories_id')->references('id')->on('categories');
+            $table->foreign('categories_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
