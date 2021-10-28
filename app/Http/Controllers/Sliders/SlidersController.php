@@ -9,11 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class SlidersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $slider = Sliders::all();
@@ -22,22 +18,11 @@ class SlidersController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('pages.slider.slider_create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(SlidersRequest $request)
     {
         $data = $request->validated();
@@ -61,12 +46,7 @@ class SlidersController extends Controller
         }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
 
@@ -76,13 +56,7 @@ class SlidersController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(SlidersRequest $request, $id)
     {
       $data = $request->validated();
@@ -108,20 +82,14 @@ class SlidersController extends Controller
       }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
       $slider = Sliders::findOrFail($id);
       try
       {
         $slider->delete();
-        if(Storage::exists('public/upload/sliders'.$slider->name)) {
-          Storage::delete('public/upload/sliders'.$slider->name);
+        if(Storage::exists('public/upload/sliders'.$slider->image)) {
+          Storage::delete('public/upload/sliders'.$slider->image);
         }
         $success = 'Delete slider successfully';
         return redirect()
