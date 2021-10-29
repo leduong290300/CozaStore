@@ -12,6 +12,13 @@ class HomeController extends Controller
     /*TODO: Show slider,categories,products*/
   public function show()
   {
-    return view('home');
+    $sliders = Sliders::all();
+    $categories = Categories::all();
+    $products = Products::where('regime','public')->get();
+    return view('home',[
+      'sliders' => $sliders,
+      'categories' => $categories,
+      'products' => $products
+    ]);
   }
 }

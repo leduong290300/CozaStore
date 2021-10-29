@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Contact;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Categories;
 
 class ContactController extends Controller
 {
     public function contact()
     {
-      return view('pages.contact');
+      $categories = Categories::all();
+      return view('pages.contact',[
+        'categories' => $categories
+      ]);
     }
 }

@@ -7,29 +7,15 @@
         </h4>
 
         <ul>
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Women
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Men
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Shoes
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Watches
-            </a>
-          </li>
+          @if($categories)
+            @foreach($categories as $category)
+              <li class="p-b-10">
+                <a href="{{route('show',$category->id)}}" class="stext-107 cl7 hov-cl1 trans-04">
+                  {{$category->name}}
+                </a>
+              </li>
+            @endforeach
+          @endif
         </ul>
       </div>
 

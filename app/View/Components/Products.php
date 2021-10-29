@@ -6,14 +6,10 @@ use Illuminate\View\Component;
 
 class Products extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $products;
+    public function __construct($products)
     {
-        //
+        $this->products = $products;
     }
 
     /**

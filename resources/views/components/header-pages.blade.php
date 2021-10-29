@@ -6,30 +6,30 @@
       <nav class="limiter-menu-desktop container">
 
         <!-- Logo desktop -->
-        <a href="#" class="logo">
+        <a href="{{route('home')}}" class="logo">
           <img src="{{asset('assets/image/icons/logo-01.png')}}" alt="IMG-LOGO">
         </a>
 
         <!-- Menu desktop -->
         <div class="menu-desktop">
           <ul class="main-menu">
-            <li>
+            <li class="header">
               <a href="{{route('home')}}">Home</a>
             </li>
 
-            <li class="active-menu label1" data-label1="hot">
+            <li class="header label1" data-label1="hot">
               <a href="{{route('shop')}}">Shop</a>
             </li>
 
-            <li>
+            <li class="header">
               <a href="{{route('blog')}}">Blog</a>
             </li>
 
-            <li>
+            <li class="header">
               <a href="{{route('about')}}">About</a>
             </li>
 
-            <li>
+            <li class="header">
               <a href="{{route('contact')}}">Contact</a>
             </li>
           </ul>
@@ -65,7 +65,7 @@
   <div class="wrap-header-mobile">
     <!-- Logo moblie -->
     <div class="logo-mobile">
-      <a href="index.html"><img src="{{asset('assets/image/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
+      <a href="{{route('home')}}"><img src="{{asset('assets/image/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
     </div>
 
     <!-- Icon header -->
