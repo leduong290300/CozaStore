@@ -50,11 +50,13 @@
 @yield('title_page')
 
 <!-- Content -->
+
+<!-- Content -->
 @yield('content')
 
 
 <!-- Footer -->
-<x-footer/>
+<x-footer :categories="$categories"/>
 
 
 <!-- Back to top -->

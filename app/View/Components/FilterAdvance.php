@@ -4,12 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Banners extends Component
+class FilterAdvance extends Component
 {
-    public $categories;
-    public function __construct($categories)
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        $this->categories = $categories;
+        //
     }
 
     /**
@@ -19,6 +23,6 @@ class Banners extends Component
      */
     public function render()
     {
-        return view('components.banners');
+        return view('components.filter-advance');
     }
 }
