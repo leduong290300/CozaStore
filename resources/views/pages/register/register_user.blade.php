@@ -13,7 +13,7 @@
     </div>
   @endif
   <div class="row">
-    <form class="form-group" method="post" enctype="multipart/form-data" action="{{route('submitFormRegisterUser')}}">
+    <form class="form-group" method="post" enctype="multipart/form-data" action="{{route('customer_register_submit')}}">
       @csrf
       <div class="row">
         <input type="text" name="username" id="username" class="form__input" placeholder="Username" value="{{old('username')}}">
@@ -71,6 +71,6 @@
     </form>
   </div>
   <div class="row">
-    <p>Already have an account? <a href="{{route('showFormLoginUser')}}">Login</a></p>
+    <p>Already have an account? <a href="{{route('customer_login')}}">Login</a></p>
   </div>
 @endsection

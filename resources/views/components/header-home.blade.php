@@ -51,9 +51,9 @@
           <div class="dropdown-menu" aria-labelledby="dropdownUser">
             @if(auth()->check())
               <a class="dropdown-item" href="">Profile</a>
-              <a class="dropdown-item" href="{{route('submitLogoutUser')}}">Logout</a>
+              <a class="dropdown-item" href="">Logout</a>
             @else
-              <a class="dropdown-item" href="{{route('showFormLoginUser')}}">Login</a>
+              <a class="dropdown-item" href="{{route('customer_login')}}">Login</a>
             @endif
           </div>
         </div>
@@ -84,9 +84,9 @@
       <div class="dropdown-menu" aria-labelledby="dropdownUser">
         @if(auth()->check())
           <a class="dropdown-item" href="#">Profile</a>
-          <a class="dropdown-item" href="{{route('submitLogoutUser')}}">Logout</a>
+          <a class="dropdown-item" href="">Logout</a>
         @else
-          <a class="dropdown-item" href="{{route('showFormLoginUser')}}">Login</a>
+          <a class="dropdown-item" href="{{route('customer_login')}}">Login</a>
         @endif
       </div>
     </div>
