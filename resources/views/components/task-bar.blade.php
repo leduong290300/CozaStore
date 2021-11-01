@@ -38,6 +38,9 @@
           <li>
             <a href="{{route('slider.index')}}"><i class="fa fa-slideshare fa-fw"></i>Slider</a>
           </li>
+          <li>
+            <a href=""><i class="fa fa-database fa-fw"></i>Statistical</a>
+          </li>
         </ul>
       </li>
     </ul>

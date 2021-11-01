@@ -11,16 +11,23 @@
         </button>
       </div>
     @endif
+    @if (session('error'))
+      <div class="alert alert-success alert-dismissable fade show" role="alert">
+        {{session('error')}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    @endif
   </div>
   <div class="row">
-    <form class="form-group" method="post" action="{{route('submitFormLoginUser')}}" enctype="multipart/form-data">
+    <form class="form-group" method="post" action="{{route('admin_login_submit')}}" enctype="multipart/form-data">
       @csrf
       <div class="row">
         <input type="text" name="email" id="email" class="form__input" placeholder="Email">
         <small class="form-text text-danger"></small>
       </div>
       <div class="row">
-        <!-- <span class="fa fa-lock"></span> -->
         <input type="password" name="password" id="password" class="form__input" placeholder="Password">
         <small  class="form-text text-danger"></small>
       </div>
@@ -39,6 +46,6 @@
     </form>
   </div>
   <div class="row">
-    <p>Don't have an account? <a href="{{route('showFormRegisterUser')}}">Create Here</a></p>
+    <p>Don't have an account? <a href="{{route('admin_register')}}">Create Here</a></p>
   </div>
 @endsection

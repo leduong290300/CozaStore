@@ -13,10 +13,10 @@ use App\Http\Controllers\About\AboutController;
 use App\Http\Controllers\Contact\ContactController;
 /*TODO: Dashboard Controller*/
 use App\Http\Controllers\Dashboard\DashboardController;
-/*TODO: Login User Controller*/
-use App\Http\Controllers\LoginUser\LoginUserController;
-/*TODO: Register User Controller*/
-use App\Http\Controllers\RegisterUser\RegisterUserController;
+/*TODO: Login Controller*/
+use App\Http\Controllers\Auth\LoginController;
+/*TODO: Register Controller*/
+use App\Http\Controllers\Auth\RegisterController;
 /*TODO: Forgot User Controller*/
 use App\Http\Controllers\ForgotUser\ForgotUserController;
 /*TODO: Slider Resource Controller*/
@@ -48,14 +48,19 @@ Route::get('/about',[AboutController::class,'about'])->name('about');
 /*TODO: Contact Controller*/
 Route::get('/contact',[ContactController::class,'contact'])->name('contact');
 /*TODO: Dashboard Controller*/
-Route::get('/dashboard',[DashboardController::class,'dashboard']);
+Route::get('/dashboard',[DashboardController::class,'dashboard'])->middleware('admin');
 /*TODO: Login User Controller*/
-Route::get('/login',[LoginUserController::class,'login'])->name('showFormLoginUser');
-Route::post('/login',[LoginUserController::class,'loginSubmit'])->name('submitFormLoginUser');
-Route::get('/logout',[LoginUserController::class,'logoutSubmit'])->name('submitLogoutUser');
+Route::get('/login/customer', [LoginController::class,'showCustomerLoginForm'])->name('customer_login');
+Route::post('/login/customer', [LoginController::class,'submitCustomerLoginForm'])->name('customer_login_submit');
 /*TODO: Register User Controller*/
-Route::get('/register',[RegisterUserController::class,'register'])->name('showFormRegisterUser');
-Route::post('/register',[RegisterUserController::class,'registerSubmit'])->name('submitFormRegisterUser');
+Route::get('/register/customer', [RegisterController::class,'showCustomerRegisterForm'])->name('customer_register');
+Route::post('/register/customer', [RegisterController::class,'submitRegisterCustomerForm'])->name('customer_register_submit');
+/*TODO: Login Admin Controller*/
+Route::get('/login/admin', [LoginController::class,'showAdminLoginForm'])->name('admin_login');
+Route::post('/login/admin', [LoginController::class,'submitAdminLoginForm'])->name('admin_login_submit');
+/*TODO: Register Admin Controller*/
+Route::get('/register/admin', [RegisterController::class,'showRegisterAdminForm'])->name('admin_register');
+Route::post('/register/admin', [RegisterController::class,'submitRegisterAdminForm'])->name('admin_register_submit');
 /*TODO: Forgot User Controller*/
 Route::get('/forgot_password',[ForgotUserController::class,'forgot'])->name('showFormForgotPasswordUser');
 /*TODO: Slider Resource Controller*/

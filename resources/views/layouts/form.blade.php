@@ -9,6 +9,8 @@
   <title>{{config('app.name')}} | @yield('page')</title>
   <link rel="stylesheet" href="{{asset('assets/css/form.css')}}">
   <link rel="stylesheet" href="{{asset('assets/lib/bootstrap-v3.3.7/css/bootstrap.css')}}">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <!-- Main Content -->

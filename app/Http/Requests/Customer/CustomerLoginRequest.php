@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\LoginUser;
+namespace App\Http\Requests\Customer;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginUserRequest extends FormRequest
+class CustomerLoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,8 @@ class LoginUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required','email','max:100','regex:/(.*)@gmail\.com/i'],
-            'password' => ['required','between:8,32'],
+          'email' => ['required','email','max:100','regex:/(.*)@gmail\.com/i'],
+          'password' => ['required','between:8,32'],
         ];
     }
 }

@@ -53,7 +53,7 @@
               <a class="dropdown-item" href="#">Profile</a>
               <a class="dropdown-item" href="{{route('submitLogoutUser')}}">Logout</a>
             @else
-              <a class="dropdown-item" href="{{route('showFormLoginUser')}}">Login</a>
+              <a class="dropdown-item" href="{{route('customer_login')}}">Login</a>
             @endif
           </div>
         </div>
@@ -86,7 +86,7 @@
           <a class="dropdown-item" href="#">Profile</a>
           <a class="dropdown-item" href="{{route('submitLogoutUser')}}">Logout</a>
         @else
-          <a class="dropdown-item" href="{{route('showFormLoginUser')}}">Login</a>
+          <a class="dropdown-item" href="{{route('customer_login')}}">Login</a>
         @endif
       </div>
     </div>
