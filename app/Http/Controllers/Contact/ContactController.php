@@ -10,8 +10,10 @@ class ContactController extends Controller
     public function contact()
     {
       $categories = Categories::all();
+      $carts = session()->get('cart');
       return view('pages.contact',[
-        'categories' => $categories
+        'categories' => $categories,
+        'carts' => $carts
       ]);
     }
 }

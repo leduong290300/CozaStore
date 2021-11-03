@@ -10,8 +10,10 @@ class BlogController extends Controller
     public function blog()
     {
       $categories = Categories::all();
+      $carts = session()->get('cart');
       return view('pages.blog',[
-        'categories' => $categories
+        'categories' => $categories,
+        'carts' => $carts
       ]);
     }
 }

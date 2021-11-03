@@ -4,6 +4,7 @@
   <title>{{config('app.name')}} | @yield('pages') </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <!--===============================================================================================-->
   <link rel="icon" type="image/png" href="{{asset('assets/image/icons/favicon.png')}}"/>
   <!--===============================================================================================-->
@@ -41,7 +42,7 @@
 <x-header-pages/>
 
 <!-- Cart -->
-<x-cart/>
+<x-cart :carts="$carts"/>
 
 <!-- breadcrumb -->
 @yield('breadcrumb')
@@ -66,8 +67,8 @@
 		</span>
 </div>
 
-<!-- Modal1 -->
-<x-modal-preview/>
+{{--<!-- Modal1 -->--}}
+{{--<x-modal-preview/>--}}
 
 <!--===============================================================================================-->
 <script src="{{asset('assets/lib/jquery/jquery-3.2.1.min.js')}}"></script>

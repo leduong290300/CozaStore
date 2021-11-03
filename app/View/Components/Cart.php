@@ -6,14 +6,10 @@ use Illuminate\View\Component;
 
 class Cart extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $carts;
+    public function __construct($carts)
     {
-        //
+        $this->carts = $carts;
     }
 
     /**

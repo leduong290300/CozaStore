@@ -34,7 +34,7 @@ class LoginController extends Controller
     public function submitCustomerLoginForm(CustomerLoginRequest $request)
     {
       $data = $request->validated();
-      if (Auth::guard('customer')->attempt($data))
+      if (Auth::attempt($data))
       {
         $request->session()->regenerate();
         return redirect()->intended('/');
