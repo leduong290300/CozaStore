@@ -10,8 +10,10 @@ class AboutController extends Controller
     public function about()
     {
       $categories = Categories::all();
+      $carts = session()->get('cart');
       return view('pages.about',[
-        'categories' => $categories
+        'categories' => $categories,
+        'carts' => $carts
       ]);
     }
 }

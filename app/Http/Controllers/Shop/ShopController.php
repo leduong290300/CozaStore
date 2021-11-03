@@ -13,9 +13,11 @@ class ShopController extends Controller
     {
       $categories = Categories::all();
       $products = Products::where('regime','public')->get();
+      $carts = session()->get('cart');
       return view('pages.shop',[
         'products' => $products,
-        'categories' => $categories
+        'categories' => $categories,
+        'carts' => $carts
       ]);
     }
 
@@ -23,9 +25,11 @@ class ShopController extends Controller
     public function show($id) {
       $categories = Categories::all();
       $products = Categories::findOrFail($id)->getProducts;
+      $carts = session()->get('cart');
       return view('pages.shop',[
         'products' => $products,
-        'categories' => $categories
+        'categories' => $categories,
+        'carts' => $carts
       ]);
     }
 }

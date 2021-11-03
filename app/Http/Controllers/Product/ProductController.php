@@ -62,6 +62,18 @@ class ProductController extends Controller
         }
     }
 
+    public function show($id)
+    {
+      $product = Products::findOrFail($id);
+      $categories = Categories::all();
+      $carts = session()->get('cart');
+      return view('pages.shop_details',[
+        'product' => $product,
+        'categories' => $categories,
+        'carts' => $carts
+      ]);
+    }
+
     public function edit($id)
     {
         $product = Products::findOrFail($id);

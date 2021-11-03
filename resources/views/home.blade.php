@@ -4,6 +4,7 @@
   <title>{{config('app.name')}} | Home</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <!--===============================================================================================-->
   <link rel="icon" type="image/png" href="{{asset('assets/image/icons/favicon.png')}}"/>
   <!--===============================================================================================-->
@@ -41,7 +42,7 @@
 <x-header-home/>
 
 <!-- Cart -->
-<x-cart/>
+<x-cart :carts="$carts"/>
 
 
 
@@ -90,8 +91,7 @@
 		</span>
 </div>
 
-<!-- Modal1 -->
-<x-modal-preview/>
+
 
 <!--===============================================================================================-->
 <script src="{{asset('assets/lib/jquery/jquery-3.2.1.min.js')}}"></script>
@@ -139,42 +139,6 @@
 <script src="{{asset('assets/lib/isotope/isotope.pkgd.min.js')}}"></script>
 <!--===============================================================================================-->
 <script src="{{asset('assets/lib/sweetalert/sweetalert.min.js')}}"></script>
-<script>
-    $('.js-addwish-b2').on('click', function(e){
-        e.preventDefault();
-    });
-
-    $('.js-addwish-b2').each(function(){
-        var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-        $(this).on('click', function(){
-            swal(nameProduct, "is added to wishlist !", "success");
-
-            $(this).addClass('js-addedwish-b2');
-            $(this).off('click');
-        });
-    });
-
-    $('.js-addwish-detail').each(function(){
-        var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
-
-        $(this).on('click', function(){
-            swal(nameProduct, "is added to wishlist !", "success");
-
-            $(this).addClass('js-addedwish-detail');
-            $(this).off('click');
-        });
-    });
-
-    /*---------------------------------------------*/
-
-    $('.js-addcart-detail').each(function(){
-        var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-        $(this).on('click', function(){
-            swal(nameProduct, "is added to cart !", "success");
-        });
-    });
-
-</script>
 <!--===============================================================================================-->
 <script src="{{asset('assets/lib/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
 <script>
