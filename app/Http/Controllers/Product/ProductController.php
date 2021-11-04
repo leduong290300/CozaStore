@@ -44,6 +44,7 @@ class ProductController extends Controller
             'color' => $data['color'],
             'inventory' => $convertInventory,
             'price' => $convertPrice,
+            'code' => $data['code'],
             'image' => $productImage,
             'description_short' => $data['description_short'],
             'description_long' => $data['description_long'],

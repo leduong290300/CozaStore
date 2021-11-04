@@ -29,6 +29,7 @@ class ProductRequest extends FormRequest
             'color' => ['required','max:255'],
             'inventory' => ['required'],
             'price' => ['required'],
+            'code' => ['required'],
             'image_product' => ['required','mimes:png,jpg','max:10000'],
             'description_short' => ['required'],
             'description_long' => ['required'],

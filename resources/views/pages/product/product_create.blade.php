@@ -66,7 +66,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="form-group">
                     <label>Inventory</label>
                     <input class="form-control" name="inventory" value="{{old('inventory')}}">
@@ -77,12 +77,23 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                   <div class="form-group">
                     <label>Price</label>
                     <input class="form-control" name="price" value="{{old('price')}}">
                     <p class="help-error">
                       @foreach ($errors->get('price') as $message)
+                        {{$message}}
+                      @endforeach
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label>Code</label>
+                    <input class="form-control" name="code" value="{{old('code')}}">
+                    <p class="help-error">
+                      @foreach ($errors->get('code') as $message)
                         {{$message}}
                       @endforeach
                     </p>
