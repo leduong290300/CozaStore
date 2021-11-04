@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('inventory');
             $table->float('price');
             $table->string('image');
+            $table->string('code');
             $table->text('description_short');
             $table->longText('description_long');
             $table->string('regime');

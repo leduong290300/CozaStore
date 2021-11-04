@@ -40,6 +40,9 @@ use App\Http\Controllers\Product\ProductController;
 
 /*Order Controller*/
 use App\Http\Controllers\OrderCart\OrderCartController;
+
+/*Purchase Controller*/
+use App\Http\Controllers\Purchase\PurchaseProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -100,3 +103,6 @@ Route::resource('product',ProductController::class);
 
 /*Order Resource Controller*/
 Route::resource('order',OrderCartController::class);
+
+/*Purchase Product Controller*/
+Route::post('/purchase',[PurchaseProductController::class,'purchaseProduct'])->name('purchaseProduct')->middleware('customer');
