@@ -16,13 +16,10 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('code');
-            $table->string('name');
-            $table->string('phone');
-            $table->string('email');
-            $table->string('address');
             $table->string('product');
+            $table->float('price');
             $table->integer('quality');
-            $table->float('total_price');
+            $table->float('total');
             $table->string('status');
             $table->unsignedInteger('customers_id');
             $table->foreign('customers_id')->references('id')->on('customers');
